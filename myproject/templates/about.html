@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{%load static%}
+
+{%block content%}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Про нас</title>
+      <link rel="shortcut icon" type="image/png" href="{% static 'images/logo.png' %}" >
+      <link rel="stylesheet" href="{% static 'styles.css' %}">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+  <style>
+    body {
+        font-family: 'Montserrat', sans-serif;
+    }
+  </style>
+<h1>Про нас</h1>
+<main>
+    <div class='doctor'>
+    <img src="{% static 'images/hospital1.jpg' %}" alt="Hospital">
+    </div>
+    <img class='hospital'src="{% static 'images/hosp2.jpg' %}" alt="Two doctors showing welcoming gestures">
+<section class='info_about'>
+    <p>
+    Медичний заклад "Ваше Здоров'я" було засновано в 2009 році, з метою покращення якості надаваних послуг на ринку медичних закладів. <br>
+    З того часу ми встигли створити декілька нових відділень, імплементувати новітні розробки зі сфери медицини та найголовніше допомогли тисячам українців.<br>
+    Наша місія полягає в забезпеченні доступу до високоякісної медичної допомоги, інноваційних технологій та підтримки, спрямованих на виявлення, лікування і профілактику захворювань.<br>
+    Ми прагнемо створити середовище, де кожна людина може отримати індивідуальний підхід до свого здоров'я, довіряючи нашим досвідченим фахівцям і сучасним медичним технологіям.<br> 
+    Наша команда працює на благо наших клієнтів, дбаючи про найвищі стандарти якості і етики.<br>
+    "Ваше здоров'я" допомагає людям усвідомлювати важливість здорового способу життя та регулярних медичних обстежень,<br>
+    щоб запобігти виникненню захворювань і підтримувати оптимальний рівень фізичного і психічного благополуччя.<br>
+</p>
+</section>
+<p class='contact'>
+    <b>Відвідайте нас за адресою:</b> <br>
+    Місто Харків, проспект Науки, 9а
+    <br><b>Ви можете зв'язатися з нами за допомогою номерів телефонів:</b> <br>
+    +380660078941 <br>
+    +380958732399 <br>
+    +380574256912 <br>
+    <b>Або написавши нам на email чи в інстаграм:</b><br>
+    email - behealthy@gmail.com <br>
+    Інстаграм - behealthy <br>
+    </p>
+</main>
+{% endblock %}

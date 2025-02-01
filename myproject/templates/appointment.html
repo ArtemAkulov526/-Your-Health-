@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<HTML>
+{%load static%}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Запис на прийом</title>
+          <link rel="shortcut icon" type="image/png" href="{% static 'images/logo.png' %}" >
+          <link rel="stylesheet" href="{% static 'styles.css' %}">
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+      </head>
+      <body>
+      <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+      </style>
+<body>
+    <header class='menu'><a href="{% url 'Головна сторінка' %}">Клініка "Ваше Здоров'я"</a>
+        <nav class='navbar'>
+            <ul>
+                <li> <a href="{% url 'Відділення' %}">Відділення</a></li>
+                <li> <a href="{% url 'Послуги' %}">Послуги</a></li>
+                <li> <a href="{% url 'Про нас' %}">Про нас</a></li>
+            </ul>
+        </nav>
+        <nav class='bar'>
+            <ol>
+                <li><a href="{% url 'Записатися на прийом' %}">Записатися на прийом</a></li>
+                <li><a href="{% url 'Особистий кабінет' %}">Особистий кабінет</a></li>
+            </ol>
+        </nav>
+    </header>
+    <h1>Запис на прийом</h1>
+    <form class='forma' method='POST'>
+    {% csrf_token %}
+
+    <div class="form-group">
+
+        <!--
+    <label for="id_Name">Вкажіть ваше Ім'я</label><br>
+        <input type="text" id="id_Name" name="Name" placeholder="Ваше ім'я в форматі ПІБ" required>
+        </div>
+-->
+      <!--
+        <div class="form-group">
+        <label for="id_Phone">Укажіть ваш телефон</label><br>
+        <input type="tel" id="id_Phone" name="Phone" placeholder="Укажіть ваш номер телефону" required>
+        </div>
+-->
+
+        <div class="form-group"> 
+        <label>Назва Відділення:</label> <br> 
+        {{ form.department }}   
+        </div>
+    
+        <div class="form-group">
+        <label for="id_NameOfService">Введіть послугу</label><br>
+        <input type="text" id="id_NameOfService" name="NameOfService" placeholder="Оберіть послугу" required>
+        </div>
+    
+        <div class="form-group">
+        <label for="id_AppointmentDate">Оберіть дату прийому</label><br>
+        <input type="date" id="id_AppointmentDate" name="AppointmentDate" placeholder="Оберіть дату прийому" required>
+       </div>
+    
+        <div class="form-group">
+        <label for="id_AppointmentTime">Оберіть час прийому</label><br>
+        <input type="time" id="id_AppointmentTime" name="AppointmentTime" placeholder="Оберіть час прийому" required>
+        </div>
+    
+    
+    <button type='submit' class='knop'>Записатись на прийом</button>
+</body>
+</html>

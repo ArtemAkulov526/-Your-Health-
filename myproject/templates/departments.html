@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{%load static%}
+
+{%block content%}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Відділення</title>
+      <link rel="shortcut icon" type="image/png" href="{% static 'images/logo.png' %}" >
+      <link rel="stylesheet" href="{% static 'styles.css' %}"><link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<style>
+    body {
+        font-family: 'Montserrat', sans-serif;
+    }
+</style>
+<h1>Список відділень</h1>
+<ul class='list'>
+    <li><a href="{% url 'Отоларингологія' %}">Отоларингологія</a></li>
+    <li><a href="{% url 'Терапевтія' %}">Терапевтія</a></li>
+    <li><a href="{% url 'Алергологія' %}">Алергологія</a></li>
+    <li><a href="{% url 'Гінекологія' %}">Гінекологія</a></li><br>
+    <li><a href="{% url 'Гастроентологія' %}">Гастроентологія</a></li>
+    <li><a href="{% url 'Дерматологія' %}">Дерматологія</a></li>
+    <li><a href="{% url 'Ендокринологія' %}">Ендокринологія</a></li>
+    <li><a href="{% url 'Ендоскопія' %}">Ендоскопія</a></li><br>
+    <li><a href="{% url 'Імунологія' %}">Імунологія</a></li>
+    <li><a href="{% url 'Кардіологія' %}">Кардіологія</a></li>
+    <li><a href="{% url 'Мамологія' %}">Мамологія</a></li>
+    <li><a href="{% url 'Неврологія' %}">Неврологія</a></li><br>
+    <li><a href="{% url 'Проктологія' %}">Проктологія</a></li>
+    <li><a href="{% url 'Урологія' %}">Урологія</a></li>
+</ul>
+{%endblock%}
+

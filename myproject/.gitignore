@@ -1,0 +1,6 @@
+*.jpg
+*.png
+*.sql
+*.sqlite3
+settings.py
+manage.py

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<HTML>
+{%load static%}
+<body>
+<header class='menu'><a href="{% url 'Головна сторінка' %}">Клініка "Ваше Здоров'я"</a>
+    <nav class='navbar'>
+        <ul>
+            <li> <a href="{% url 'Відділення' %}">Відділення</a></li>
+            <li> <a href="{% url 'Послуги' %}">Послуги</a></li>
+            <li> <a href="{% url 'Про нас' %}">Про нас</a></li>
+        </ul>
+    </nav>
+    <nav class='bar'>
+        <ol>
+            <li><a href="{% url 'Записатися на прийом' %}">Записатися на прийом</a></li>
+            <li><a href="{% url 'Особистий кабінет' %}">Особистий кабінет</a></li>
+        </ol>
+    </nav>
+</header>
+{%block content%} {%endblock%}
+</body>
+<footer> 
+    <img class ='contact_logo' src="{% static 'images/phone.png' %}" alt="phone logo"> +380660078941 
+    <img class ='contact_logo' src="{% static 'images/mail.png' %}" alt="mail logo"> behealthy@gmail.com
+    <img class ='contact_logo' src="{% static 'images/ig.png' %}" alt="instagram logo"> behealthy<br>
+    Якщо бажаете залишити скаргу або побажання зверніться до нашого боту<br>
+    Розроблено студентом групи 6.04.121.010.20.3 Акуловим Артемом
+</footer>
+</html>

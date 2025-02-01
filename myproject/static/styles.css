@@ -1,0 +1,272 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.menu{
+    background-color: #3fa603;
+    color:white;
+    padding: 20px;
+    display: flex;
+    align-items: center; 
+    padding-right: 30px;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+h1, h2, h3{
+text-align: center;
+padding: 10px;
+}
+
+.navbar ul{
+    display: flex; 
+    justify-content: flex-start; 
+}
+
+.navbar ul li{
+    display: inline-block;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.bar ol{
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+.bar li{
+    margin-right: 30px;
+    padding: 10px ,10px;
+    cursor: pointer;
+}
+
+.contact_logo{
+    width: 1%;
+    height: auto;
+    margin-left: 20px;
+    margin-right: 5px;
+}
+.main_image {
+    position: relative;
+    width: 100%;
+}
+.main_image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 60%;
+}
+.heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(0,3,0);
+    font-size: 24px;
+    font-weight: bold;
+    padding: 50px;
+    border: 1px solid;
+    background-color: rgba(248, 248, 248, 0.774);
+    border-radius: 8px;
+}
+.knopka_main{
+    background-color: #3fa603;
+    color:white;
+    padding:15px 20px;
+    margin-top:30px;
+    border-radius: 8px;
+}
+
+.advantages{
+    text-align: center;
+}
+.advantages li{
+    display: inline-block;
+    background-color: #3fa603;
+    color:white;
+    padding: 10px 10px;
+    font-size: 20px;
+    margin-right: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0; 
+    position: fixed; 
+    bottom: 0; 
+    width: 100%; 
+}
+.services_info{
+    margin: 0 auto; 
+    width: 80%;     
+    border-collapse: collapse; 
+
+}
+.services_info tr, .services_info td{
+    padding: 10px;  
+    text-align: center; 
+    border: 1px solid black; 
+}
+
+.info_about p{
+    text-align: center;
+    padding: 10px 10px;
+    line-height: 35px;
+}
+
+.contact{
+    clear: left;
+    line-height: 35px;
+}
+
+.hospital{
+    width: 23%;
+    height: auto;
+    float:inline-end;
+    margin-right: 10px;
+    display: block;
+}
+
+.doctor_image{
+    text-align: center; 
+}
+.doctor_image img{
+    width: 17%;
+    height: auto;
+    float:inline-start;
+    margin-right: 10px;
+    display: block;
+}
+.doctor img{
+    width: 23%;
+    height: auto;
+    float:left;
+    margin-right: 10px;
+    display: block;
+}
+.price{
+    margin: auto;
+    width: 40%;
+    height: auto;
+}
+.price tr, .prices td{
+    text-align: center;
+    border: 1px solid black;
+}
+.photo img{
+    width: 27%;
+    height: auto;
+    float:left;
+    margin-right: 10px;
+    display: block;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited{
+    color:white;
+}
+a:hover{
+    color:black;
+    text-decoration: underline;
+}
+
+ul.list {
+    list-style: none; 
+    text-align: center; 
+    margin: 0;
+    padding: 0;
+}
+
+ul.list li {
+    display: inline-block; 
+    width: 200px; 
+    height: 50px; 
+    line-height: 50px; 
+    margin: 10px; 
+    background-color: #3fa603; 
+    color: #fff; 
+    border-radius: 8px; 
+}
+
+.list_of_symptoms{
+    padding: 5px;
+}
+
+.list_of_symptoms li{
+    list-style-type: disc;
+    padding: 3px;
+    margin-left: 50px;
+}
+.caption{
+    margin-top: 10px; 
+    font-size: 14px; 
+    color: #333; 
+    clear:left;
+    margin-left: 10px;
+}
+
+.info{
+    padding: 3px;
+}
+.info li{
+    list-style-type: disc;
+    padding: 3px;
+}
+
+.forma{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    background-color: #3fa603;
+    max-width: 500px; 
+    padding: 20px 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: auto;
+}
+
+.form-group{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.knop{
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    width:175px;
+    height: 40px;
+}
+input{
+    border-radius: 2px;
+    font-size: 16px;
+}
+
+.btn{
+        background-color: white;
+        color:black;
+        padding:15px 20px;
+        margin-top:30px;
+        border-radius: 8px;
+        position: fixed;
+        bottom: 100px; 
+        right: 30px; 
+}
+.user_info{
+    margin-bottom: 10px;
+}
+.name{
+    width: auto;
+}

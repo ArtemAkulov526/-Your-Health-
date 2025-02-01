@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<HTML>
+{%load static%}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Особистий кабінет</title>
+          <link rel="shortcut icon" type="image/png" href="{% static 'images/logo.png' %}" >
+          <link rel="stylesheet" href="{% static 'styles.css' %}">
+    </head>
+<body>
+    <header class='menu'><a href="{% url 'Головна сторінка' %}">Клініка "Ваше Здоров'я"</a>
+        <nav class='navbar'>
+            <ul>
+                <li> <a href="{% url 'Відділення' %}">Відділення</a></li>
+                <li> <a href="{% url 'Послуги' %}">Послуги</a></li>
+                <li> <a href="{% url 'Про нас' %}">Про нас</a></li>
+            </ul>
+        </nav>
+        <nav class='bar'>
+            <ol>
+                <li><a href="{% url 'Записатися на прийом' %}">Записатися на прийом</a></li>
+                <li><a href="{% url 'Особистий кабінет' %}">Особистий кабінет</a></li>
+            </ol>
+        </nav>
+    </header>
+    <h1>Особистий кабінет</h1>
+    <h2>Вітаємо, {{ username }}</h2>
+    <div class='user_info'>
+    <ul class='list'>
+    <li><b>Ім'я</b></li>
+    <li class='name'>{{ username }}</li><br>
+    <li><b>email</b></li>
+    <li>{{ email}}</li>
+    </div>
+</ul>
+<table class="price" border='1'>
+<thead>
+    <tr>
+        <!-- <th>Ім'я</th> -->
+        <!-- <th>Телефон</th> -->
+        <!-- <th>Відділення</th> -->
+        <th>Послуга</th>
+        <th>Дата прийому</th>
+        <th>Час прийому</th>
+        <th>Скасування прийому</th>
+    </tr>
+</thead>
+<tbody>
+    {% for appointment in appointments %}
+        <tr>
+            <!-- <td>{{ appointment.Name }}</td> -->
+            <!-- <td>{{ appointment.Phone }}</td> -->
+            <!-- <td>{{ appointment.Department.DepartmentName }}</td> -->
+            <td>{{ appointment.NameOfService }}</td>
+            <td>{{ appointment.AppointmentDate }}</td>
+            <td>{{ appointment.AppointmentTime }}</td>
+            <td><a href={% url 'Скасування запису' appointment.AppointmentID %}><button type="button">Скасувати прийом</button></a></td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="7">Записів на прийом не знайдено!</td>
+        </tr>
+        {% endfor %}
+</tbody>
+
+
+    <form action="{% url 'Вихід з акаунту' %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class='btn'>Вийти з акаунту</button>
+    </form>
+</body>
+<footer> 
+    <img class ='contact_logo' src="{% static 'images/phone.png' %}" alt="phone logo"> +380660078941 
+    <img class ='contact_logo' src="{% static 'images/mail.png' %}" alt="mail logo"> behealthy@gmail.com
+    <img class ='contact_logo' src="{% static 'images/ig.png' %}" alt="instagram logo"> behealthy<br>
+    Розроблено студентом групи 6.04.121.010.20.3 Акуловим Артемом
+</footer>
+</html>

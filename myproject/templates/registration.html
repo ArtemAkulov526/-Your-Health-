@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<HTML>
+{%load static%}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Реєстрація</title>
+          <link rel="shortcut icon" type="image/png" href="{% static 'images/logo.png' %}" >
+          <link rel="stylesheet" href="{% static 'styles.css' %}">
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+      </head>
+      <body>
+      <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+      </style>
+<body>
+<header class='menu'><a href="{% url 'Головна сторінка' %}">Клініка "Ваше Здоров'я"</a>
+        <nav class='navbar'>
+            <ul>
+                <li> <a href="{% url 'Відділення' %}">Відділення</a></li>
+                <li> <a href="{% url 'Послуги' %}">Послуги</a></li>
+                <li> <a href="{% url 'Про нас' %}">Про нас</a></li>
+            </ul>
+        </nav>
+        <nav class='bar'>
+            <ol>
+                <li><a href="{% url 'Записатися на прийом' %}">Записатися на прийом</a></li>
+                <li><a href="{% url 'Особистий кабінет' %}">Особистий кабінет</a></li>
+            </ol>
+        </nav>
+</header>
+<h1>Реєстрація</h1>
+<form class='forma' method='POST'>
+        {% csrf_token %}
+        
+        <div class="form-group">
+            <label for="id_username">Ім'я</label><br>
+            <input type="text" id="id_username" name="username" placeholder='Введіть ваш ПІБ' required>
+        </div>
+
+        <div class="form-group">
+            <label for="id_email">Email:</label><br>
+            <input type="email" id="id_email" name="email" placeholder='Введіть свій email'required>
+        </div>
+
+        <div class="form-group">
+            <label for="id_password1">Пароль</label><br>
+            <input type="password" id="id_password1" placeholder='Введіть пароль'name="password1" required>
+        </div>
+        <p>Пароль повинен містити мінімум 8 символів</p>
+
+        <div class="form-group">
+            <label for="id_password2">Підтвердження паролю</label><br>
+            <input type="password" id="id_password2" placeholder='Підтвердіть пароль'name="password2" required>
+        </div>
+
+    <button type='submit' class='knop'>Зареєструватись</button>
+    <p>Якщо в вас є акаунт, ви можете <a href="{% url 'Авторизація' %}">авторизуватися</a></p>
+</form>
+</body>
+<footer> 
+    <img class ='contact_logo' src="{% static 'images/phone.png' %}" alt="phone logo"> +380660078941 
+    <img class ='contact_logo' src="{% static 'images/mail.png' %}" alt="mail logo"> behealthy@gmail.com
+    <img class ='contact_logo' src="{% static 'images/ig.png' %}" alt="instagram logo"> behealthy<br>
+    Розроблено студентом групи 6.04.121.010.20.3 Акуловим Артемом
+</footer>
+</html>
