@@ -4,3 +4,6 @@
 *.sqlite3
 settings.py
 manage.py
+__init__.py
+__pycache__/
+wsgi.py
