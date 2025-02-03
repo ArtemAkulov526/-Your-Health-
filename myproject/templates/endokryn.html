@@ -46,12 +46,12 @@
     <h2>Доступні послуги у відділенні<h2>
     <tr>
       <th>Послуга</th>
-     <!--<th>Вартість</th>--> 
+     <th>Вартість</th>
     </tr>
     {% for service in services %}
       <tr>
         <td>{{ service.NameOfService }}</td>
-       <!--<td>{{ service.Cost }}</td>--> 
+       <td>{{ service.Cost }}</td>
       </tr>
     {% endfor %}
 </table>

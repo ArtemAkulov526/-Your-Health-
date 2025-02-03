@@ -37,9 +37,6 @@
 <table class="price" border='1'>
 <thead>
     <tr>
-        <!-- <th>Ім'я</th> -->
-        <!-- <th>Телефон</th> -->
-        <!-- <th>Відділення</th> -->
         <th>Послуга</th>
         <th>Дата прийому</th>
         <th>Час прийому</th>
@@ -49,9 +46,6 @@
 <tbody>
     {% for appointment in appointments %}
         <tr>
-            <!-- <td>{{ appointment.Name }}</td> -->
-            <!-- <td>{{ appointment.Phone }}</td> -->
-            <!-- <td>{{ appointment.Department.DepartmentName }}</td> -->
             <td>{{ appointment.NameOfService }}</td>
             <td>{{ appointment.AppointmentDate }}</td>
             <td>{{ appointment.AppointmentTime }}</td>

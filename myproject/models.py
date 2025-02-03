@@ -15,8 +15,6 @@ class Departments(models.Model):
 class Services(models.Model):
     ServiceId = models.AutoField(primary_key=True)
     Department = models.ForeignKey(Departments, on_delete=models.CASCADE)
-    #DepartmentId =  models.CharField(max_length=255)
-    #DepartmentName = models.CharField(max_length=255)
     NameOfService = models.CharField(max_length=255)
     Cost = models.DecimalField(max_digits=10, decimal_places=2)
 
@@ -28,8 +26,6 @@ class Appointment(models.Model):
     Name = models.CharField(max_length=150)
     Phone = models.CharField(max_length=13)
     Department = models.ForeignKey(Departments, on_delete=models.CASCADE)
-    #DepartmentName = models.CharField(max_length=255)
-    #DepartmentName = models.ForeignKey(Departments, on_delete=models.CASCADE)
     NameOfService = models.CharField(max_length=150)
     AppointmentDate = models.DateField()
     AppointmentTime = models.TimeField()

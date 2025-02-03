@@ -44,7 +44,7 @@ def appointment(request):
     else:
         form = AppointmentForm()
 
-    departments = Departments.objects.all()  # Retrieve all departments
+    departments = Departments.objects.all()  
     context = {'form': form, 'departments': departments}
     return render(request, 'appointment.html', context)
     
@@ -63,7 +63,6 @@ def render_department(request, department_id, template_name):
     }
     return HttpResponse(template.render(context, request))
 
-# URLs mapping to the generalized function
 def ear(request):
     return render_department(request, 1, 'ears.html')
 
@@ -107,7 +106,7 @@ def urology(request):
     return render_department(request, 14, 'urology.html')
 
 def signup(request):
-    username = ''  # Initialize username to an empty string
+    username = ''  
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
         if form.is_valid():
@@ -115,7 +114,6 @@ def signup(request):
             username = name_with_spaces.replace(' ', '_')
             user = form.save()
             login(request, user)
-            # Redirect to login page after successful signup
             return redirect('Особистий кабінет')
     else:
         form = RegistrationForm()
@@ -126,11 +124,8 @@ def user_login(request):
     if request.method == 'POST':
         form = AuthenticationForm(request, data=request.POST)
         if form.is_valid():
-            # Authenticate and obtain the user object
             user = form.get_user()
-            # Log in the user
             login(request, user)
-            # Redirect to the homepage after successful login
             return redirect('Особистий кабінет')
     else:
         form = AuthenticationForm()

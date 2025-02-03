@@ -31,5 +31,3 @@ class ServiceForm(forms.ModelForm):
         class Meta:
             model = Services
             fields = ('department', 'NameOfService')
-
-#'Department',, 'DepartmentName''DepartmentId',

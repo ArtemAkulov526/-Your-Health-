@@ -41,7 +41,7 @@
             <th>Номер послуги</th>
             <th>Відділення</th>
             <th>Послуга</th>
-            <!--<th>Ціна</th>-->
+            <th>Ціна</th>
         </tr>
     </thead>
     <tbody>
@@ -50,19 +50,11 @@
                 <td>{{ service.ServiceId }}</td>
                 <td>{{ service.Department.DepartmentName }}</td>
                 <td>{{ service.NameOfService }}</td>
-               <!--<td>{{ service.Cost }}</td>--> 
+               <td>{{ service.Cost }}</td>
             </tr>
         {% endfor %}
     </tbody>
 </table>
 </main>
 </body>
- <!--
-<footer> 
-    <img class ='contact_logo' src="{% static 'images/phone.png' %}" alt="phone logo"> +380660078941 
-    <img class ='contact_logo' src="{% static 'images/mail.png' %}" alt="mail logo"> behealthy@gmail.com
-    <img class ='contact_logo' src="{% static 'images/ig.png' %}" alt="instagram logo"> behealthy<br>
-    &copy;Розроблено студентом групи 6.04.121.010.20.3 Акуловим Артемом
-</footer>
--->
 </html>

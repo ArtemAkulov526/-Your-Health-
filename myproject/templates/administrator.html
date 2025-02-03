@@ -35,7 +35,7 @@
             <th>Номер послуги</th>
             <th>Відділення</th>
             <th>Послуга</th>
-           <!-- <th>Ціна</th>-->
+            <th>Ціна</th>
             <th>Управління записами</th>
         </tr>
     </thead>
@@ -45,7 +45,7 @@
                 <td>{{ service.ServiceId }}</td>
                 <td>{{ service.Department.DepartmentName }}</td>
                 <td>{{ service.NameOfService }}</td>
-               <!-- <td>{{ service.Cost }}</td>-->
+                <td>{{ service.Cost }}</td>
                 <td> <a href={% url 'Редагувати запис' service.ServiceId %}><button type="button">Редагувати</button></a> 
                     <a href={% url 'Видалити запис' service.ServiceId %}><button type="button">Видалити</button></a>
                 </td>
@@ -55,9 +55,4 @@
 </table>
 </main>
 </body>
- <!--
-        <footer> 
-    &copy;Розроблено студентом групи 6.04.121.010.20.3 Акуловим Артемом
-</footer>
--->
 </html>

@@ -51,5 +51,3 @@ urlpatterns = [
     path('delete_appointment/<AppointmentID>/',views.deleteappointment, name='Скасування запису'),
 
 ]
-
-#python manage.py runserver
